@@ -1,0 +1,135 @@
+.comics_item {
+  color: black;
+  justify-self: center;
+  margin: 0 0 3rem;
+  text-align: left;
+  height: 415px;
+  width: 224px;
+
+  &:hover {
+
+    .figure {
+      transition: all .17s ease-in-out;
+      transform: translate3d(0,-10px,0);
+    }
+
+    .price_tag {
+      box-shadow: 3px 3px 4px;
+      transition: all .17s ease-in-out;
+      transform: scale(1.2) rotate(35deg);
+    }
+
+    .description {
+      opacity: 1;
+      transition: all .17s ease-in-out;
+    }
+
+    .title {
+      color: #e62429;
+    }
+
+  }
+
+  .figure {
+    background-color: black;
+    box-shadow: 0 26px 24px -16px rgba(0, 0, 0, .4);
+    height: 342px;
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: all .17s ease-in-out;
+
+    img {
+      height: 342px;
+      width: 224px;
+    }
+  }
+
+  .price_tag {
+    background-color: #e62429;
+    border: 1px solid #000;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 80%);
+    overflow: hidden;
+    padding: 0px 6px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    transform: rotate(35deg);
+    transition: all .17s ease-in-out;
+
+    &::before,
+    &::after {
+      background-color: black;
+      border-radius: 50%;
+      content: '';
+      overflow: hidden;
+      position: absolute;
+      height: 10px;
+      width: 10px;
+    }
+
+    &::before {
+      left: -6px;
+      top: 4px;
+    } 
+
+    &::after {
+      right: -6px;
+      top: 4px;
+    } 
+  }
+
+  .description {
+    background-image: linear-gradient(transparent, rgba(0,0,0,.8) 75%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: .5em;
+    line-height: 1.5em;
+    opacity: 0;
+    padding: 30px 10px 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all .17s ease-in-out;
+
+    span {
+      font-style: italic;
+    }
+
+    strong {
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+
+  .title {
+    font-size: .75em;
+    font-weight: 700;
+    line-height: 1.3rem;
+  }
+
+  .creator_wrapper {
+    font-size: 0.65em;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  .creator {
+    padding-right: 4px;
+    position: relative;
+
+    &:not(:last-child):after {
+      content: ' -';
+    }
+  }
+
+}

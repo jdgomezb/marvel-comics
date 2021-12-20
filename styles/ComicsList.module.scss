@@ -1,0 +1,32 @@
+.comics_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1240px;
+}
+
+@media(min-width: 600px) {
+  .comics_list {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(min-width: 820px) {
+  .comics_list {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media(min-width: 1060px) {
+  .comics_list {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+@media(min-width: 1280px) {
+  .comics_list {
+    grid-template-columns: repeat(5,1fr);
+  }
+}

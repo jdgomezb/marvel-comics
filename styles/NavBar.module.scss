@@ -1,0 +1,116 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  margin: 0 2rem 3rem;
+  z-index: 1;
+
+  .btn {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    overflow: hidden;
+    padding: .8rem 1rem;
+    position: relative;
+    text-align: right;
+    text-shadow: 0 0 4px #333;
+    text-transform: uppercase;
+    transition: all .17s ease-in-out;
+    width: 14rem;
+    
+    &::before {
+      background-repeat: no-repeat;
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover,
+    &.active {
+      cursor: pointer;
+      box-shadow: 0 6px 10px -1px #aaa;
+      border-color: #000;
+      padding-top: .75rem;
+      padding-bottom: .85rem;
+      text-shadow: 0 2px 4px #000;
+      transform: translate3d(0,-3px,0);
+      transition: all .17s ease-in-out;
+    }
+  }
+  
+  .spiderman_btn {
+
+    &::before {
+      background-color: #be9c18;
+      background-image: url('/thumb_spiderman.jpeg');
+      background-position: -40px -30px;
+      background-size: 80%;
+    }
+    
+    &:hover {
+    }
+  }
+  
+  .wolverine_btn {
+
+    &::before {
+      background-color: #38b1bb;
+      background-image: url('/thumb_wolverine.jpeg');
+      background-position: -30px -55px;
+      background-size: 80%;
+    }
+    
+    &:hover {
+    }
+  }
+  .deadpool_btn {
+
+    &::before {
+      background-color: #38adb6;
+      background-image: url('/thumb_deadpool.jpeg');
+      background-position: 0px -36px;
+      background-size: 65%;
+    }
+
+    &:hover {
+      background-image: url('/thumb_deadpool.jpeg');
+    }
+  }
+  .ironman_btn {
+
+    &::before {
+      background-color: #38adb6;
+      background-image: url('/thumb_ironman.jpeg');
+      background-position: 65px -50px;
+      background-size: 80%;
+      transform: scaleX(-1);
+    }
+
+    &:hover {
+      
+    }
+  }
+}
+
+@media(min-width: 600px) {
+  .nav {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(min-width: 1080px) {
+  .nav {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
