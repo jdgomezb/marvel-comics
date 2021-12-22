@@ -25,10 +25,12 @@ export default function SearchBar() {
   const search = evt => {
     evt.preventDefault();
     evt.target.blur();
+    evt.target.value = '';
 
     if(userInput.trim() == '') return;
 
     setFilter(userInput);
+    setUserInput('');
   }
 
   return (
@@ -41,9 +43,10 @@ export default function SearchBar() {
             onFocus={ onFocus }
             onChange={ onChange }
             onKeyUp={ onKeyUp }
+            placeholder='Search your favorite Marvel character'
           />
       </form>
-      <h1 className={ styles.current_filter }>Current filter: <span>{ filter }</span></h1>
+      <h2 className={ styles.current_filter }>Current filter: <span>{ filter }</span></h2>
     </div>
   );
 }

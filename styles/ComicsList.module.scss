@@ -3,8 +3,35 @@
   grid-template-columns: 1fr;
   grid-gap: 20px;
   padding: 20px;
+  position: relative;
   width: 100%;
   max-width: 1240px;
+
+  .message {
+    font-weight: 400;
+    position: absolute;
+    top: -30px;
+    width: 100%;
+
+    .filter {
+      font-weight: 700;
+    }
+  }
+}
+.comics_list_empty {
+  display: grid;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.message {
+  color: #777;
+  font-size: 1.3em;
+  text-align: center;
+
+  .filter {
+    font-style: italic;
+  }
 }
 
 @media(min-width: 600px) {

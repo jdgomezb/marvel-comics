@@ -32,7 +32,7 @@ export default function NavBar() {
           key={ idx }
           className={ `${styles.btn} ${styles[`${character.className}_btn`]}` }
           value = { character.name.toLowerCase() }
-          onClick = {e => setFilter(e.target.value) }>
+          onClick = { evt => setFilter(evt.target.value) }>
           { character.name }</button>
       }) }
     </nav>
