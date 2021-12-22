@@ -1,24 +1,23 @@
 import React, { useState, useEffect, useContext } from 'react';
 import SearchBar from '../ui/SearchBar';
 import ComicsList from '../ui/ComicsList';
-import Superheroes from '../ui/NavBar';
+import NavBar from '../ui/NavBar';
 import { FilterContext } from '../main/FilterContext';
 
-import axiosFetch from '../../config/axios'
+import {axiosComics} from '../../config/axios'
 
 import styles from '../../styles/Main.module.scss';
 
 export default function Main() {
 
-  const [filter, setFilter] = useState('Spider-man');
+  const [filter, setFilter] = useState('');
   const [comics, setComics] = useState([]);
 
   useEffect(() => {
     const fetchComics = async () => {
       if (!filter) return;
 
-      const parameters = { title: filter }
-      const {data} = await axiosFetch('', { params: parameters });
+      const {data} = await axiosComics({ params: { title: filter } });
       const result = await data;
 
       setComics(result.data.results);
@@ -31,7 +30,7 @@ export default function Main() {
       <div className={ styles.container }>
         <header className={ styles.header }>
           <SearchBar setFilter={ setFilter } />
-          <Superheroes />
+          <NavBar />
         </header>
         <main className={ styles.main }>
           <ComicsList
