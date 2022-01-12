@@ -21,7 +21,7 @@ export default function ComicsList({comics}) {
           ))}
         </div>
       :
-        filter == '' &&
+        filter === '' &&
           <div className={ styles.comics_list_empty }>
             <h2 className={ styles.message }>Please use the search field <br/> or click on the featured Characters</h2>
           </div>

@@ -9,11 +9,11 @@ export default function SearchBar() {
   const [ userInput, setUserInput ] = useState('');
 
   const onChange = evt => {
-    if (evt.target.value == '') return;
+    if (evt.target.value === '') return;
   }
 
   const onKeyUp = evt => {
-    if (evt.code == 'Enter') search(evt);
+    if (evt.code === 'Enter') search(evt);
 
     setUserInput(evt.target.value);
   }
@@ -27,7 +27,7 @@ export default function SearchBar() {
     evt.target.blur();
     evt.target.value = '';
 
-    if(userInput.trim() == '') return;
+    if(userInput.trim() === '') return;
 
     setFilter(userInput);
     setUserInput('');

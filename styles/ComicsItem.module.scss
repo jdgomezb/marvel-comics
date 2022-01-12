@@ -33,7 +33,7 @@
   .figure {
     background-color: black;
     box-shadow: 0 26px 24px -16px rgba(0, 0, 0, .4);
-    height: 342px;
+    height: 314px;
     width: 100%;
     margin-bottom: 25px;
     overflow: hidden;
@@ -41,13 +41,13 @@
     transition: all .17s ease-in-out;
 
     img {
-      height: 342px;
+      height: 314px;
       width: 224px;
     }
   }
 
   .price_tag {
-    background-color: #e62429;
+    background-color: yellow;
     border: 1px solid #000;
     box-shadow: 2px 2px 2px rgb(0 0 0 / 80%);
     overflow: hidden;

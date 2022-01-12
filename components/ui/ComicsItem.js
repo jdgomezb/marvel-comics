@@ -10,15 +10,17 @@ export default function ComicsItem({comic_data}) {
   const series = comic_data.series.name
   const variants = comic_data.variants.length
   const img_src = `${comic_data.thumbnail.path}.${comic_data.thumbnail.extension}`
-  const writers = comic_data.creators.items.filter(creator => creator.role=='writer')
+  const writers = comic_data.creators.items.filter(creator => creator.role === 'writer')
   const price = comic_data.prices[0]
 
   return ( 
     <div className={ styles.comics_item }>
       <figure className={ styles.figure }>
-        <img 
+        <Image
           alt={ title }
-          src={ img_src } 
+          src={ img_src }
+          height={ 342 }
+          width={ 244 }
         />
         <span className={ styles.price_tag }>$ { price.price }</span>
         <p className={ styles.description }>
