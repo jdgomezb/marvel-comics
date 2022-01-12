@@ -28,7 +28,6 @@ export default function ComicsItem({comic_data}) {
           <span><strong>Format:</strong> { format }</span>
           <span><strong>Series:</strong> { series }</span>
           <span><strong>Variants:</strong> { variants }</span>
-          
         </p>
       </figure>
       <div>

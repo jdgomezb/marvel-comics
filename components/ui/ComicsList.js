@@ -13,9 +13,9 @@ export default function ComicsList({comics}) {
       { comics.length >= 1 ?
         <div className={ styles.comics_list }>
           <h2 className={ styles.message }>Showing results for: <span className={ styles.filter }>{ filter }</span></h2>
-          {comics.map(comic => (
+          { comics.map( comic => (
             <ComicsItem
-              key = {comic.id}
+              key = { comic.id }
               comic_data = { comic }
             />
           ))}
